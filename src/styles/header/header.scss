@@ -1,0 +1,14 @@
+.header_list {
+  height: 4em;
+  margin: 2em 4em 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $accent;
+  border-radius: 10px;
+  border: 2px solid $accent-dark;
+
+  &__item {
+    text-transform: uppercase;
+  }
+}
