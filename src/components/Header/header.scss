@@ -10,5 +10,10 @@
 
   &__item {
     text-transform: uppercase;
+    line-height: 0;
+
+    img {
+      border-radius: 5px;
+    }
   }
 }
