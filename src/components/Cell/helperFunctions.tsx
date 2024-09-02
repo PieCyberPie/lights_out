@@ -1,9 +1,9 @@
-export function toggleCell(cell: HTMLElement): void {
+function toggleCell(cell: HTMLElement): void {
   cell.classList.toggle("cell--dark");
   cell.classList.toggle("cell--light");
 }
 
-export function toggleAdjacentCells(cell: HTMLElement): void {
+function toggleAdjacentCells(cell: HTMLElement): void {
   const targetRow = parseInt(cell.dataset.row || "", 10);
   const targetCol = parseInt(cell.dataset.col || "", 10);
   const directions = [
@@ -20,10 +20,13 @@ export function toggleAdjacentCells(cell: HTMLElement): void {
       `.cell[data-row="${adjacentRow}"][data-col="${adjacentCol}"]`
     );
 
-    console.log(adjacentCell);
-
     if (adjacentCell) {
       toggleCell(adjacentCell as HTMLElement);
     }
   });
 }
+
+export const makeMove = (targetCell: HTMLElement) => {
+  toggleCell(targetCell);
+  toggleAdjacentCells(targetCell);
+};

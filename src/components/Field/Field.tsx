@@ -14,7 +14,7 @@ const Field: React.FC<FieldRowsColsProps> = ({ rowsNum, colsNum }) => {
         }}
       >
         {cells.map((cellId) => {
-          console.log(cellId);
+          cellId;
           return (
             <Cell
               row={Math.floor(cellId / colsNum)}
