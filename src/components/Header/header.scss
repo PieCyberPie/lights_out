@@ -1,5 +1,6 @@
 .header_list {
-  height: 4em;
+  height: 6em;
+  width: 50%;
   margin: 2em 4em 0;
   display: flex;
   justify-content: space-around;
@@ -16,4 +17,17 @@
       border-radius: 5px;
     }
   }
+}
+
+.reset {
+  text-transform: uppercase;
+  background-color: #faaa4e;
+  padding: 0.5em;
+  border: 1px solid rgb(252, 127, 44);
+  border-radius: 10px;
+  &:hover {
+    color: white;
+    background-color: #d34343;
+  }
+  transition-duration: 0.3s;
 }

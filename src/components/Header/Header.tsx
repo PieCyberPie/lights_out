@@ -7,6 +7,8 @@ const Header: React.FC<RowsColsProps> = ({
   setRowsNum,
   colsNum,
   setColsNum,
+  rerender,
+  setRerender,
 }) => (
   <ul className="header_list">
     <li className="header_list__item">
@@ -18,9 +20,20 @@ const Header: React.FC<RowsColsProps> = ({
         setRowsNum={setRowsNum}
         colsNum={colsNum}
         setColsNum={setColsNum}
+        rerender={rerender}
+        setRerender={setRerender}
       />
     </li>
-    <li className="header_list__item">reset</li>
+    <li className="header_list__item">
+      <button
+        className="reset"
+        onClick={() => {
+          setRerender((rerender) => !rerender);
+        }}
+      >
+        reset
+      </button>
+    </li>
   </ul>
 );
 

@@ -7,8 +7,10 @@ const RowColSelector: React.FC<RowsColsProps> = ({
   setColsNum,
 }) => {
   return (
-    <div>
+    <div className="selector-container">
+      <label htmlFor="rows">Number of rows</label>
       <input
+        name="rows"
         className="rows"
         type="number"
         min="1"
@@ -17,9 +19,10 @@ const RowColSelector: React.FC<RowsColsProps> = ({
         onChange={(e) => {
           setRowsNum(parseInt(e.target.value));
         }}
-        name="rows"
       />
+      <label htmlFor="cols">Number of columns</label>
       <input
+        name="cols"
         className="cols"
         type="number"
         min="1"
@@ -28,7 +31,6 @@ const RowColSelector: React.FC<RowsColsProps> = ({
         onChange={(e) => {
           setColsNum(parseInt(e.target.value));
         }}
-        name="cols"
       />
     </div>
   );

@@ -1,7 +1,14 @@
-input {
-  border: 1px solid #cccccc; //цвет рамки
-  border-radius: 3px; //закругление углов (общее)
-  background: #ffffff !important; // желательно прописывать, так как в Chrome при сохранных данных оно может быть желтым
-  outline: none; // удаляет обводку в браузерах хром(желтая) и сафари(синяя)
-  width: 3em; // ширина на свое усмотрение
+.rows,
+.cols {
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background: #ffffff;
+  outline: none;
+  width: 3em;
+}
+
+.selector-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

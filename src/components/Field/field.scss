@@ -1,0 +1,6 @@
+.grid-container {
+  display: grid;
+  gap: 10px; // You can adjust the spacing between squares
+  grid-auto-rows: 1fr; // Ensure rows have equal height
+  grid-auto-columns: 1fr; // Ensure columns have equal width
+}

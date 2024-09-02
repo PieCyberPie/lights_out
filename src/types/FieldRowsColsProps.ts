@@ -1,4 +1,4 @@
 export interface FieldRowsColsProps {
-  rows: number;
-  cols: number;
+  rowsNum: number;
+  colsNum: number;
 }
