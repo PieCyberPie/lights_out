@@ -25,9 +25,10 @@
   padding: 0.5em;
   border: 1px solid rgb(252, 127, 44);
   border-radius: 10px;
+  transition-duration: 0.3s;
+
   &:hover {
     color: white;
     background-color: #d34343;
   }
-  transition-duration: 0.3s;
 }
