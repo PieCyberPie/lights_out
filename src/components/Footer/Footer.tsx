@@ -1,3 +1,3 @@
-const Footer = () => <p>ok</p>;
+const Footer = () => <p className="text">ok</p>;
 
 export default Footer;
