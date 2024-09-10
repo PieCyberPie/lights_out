@@ -1,5 +1,5 @@
-import logo from "../../assets/icon/logo.svg";
 import { RowsColsProps } from "../../types/RowsColsProps";
+import Logo from "../Logo/Logo";
 import RowColSelector from "../RowColSelector/RowColSelector";
 
 const Header: React.FC<RowsColsProps> = ({
@@ -10,31 +10,33 @@ const Header: React.FC<RowsColsProps> = ({
   rerender,
   setRerender,
 }) => (
-  <ul className="header_list">
-    <li className="header_list__item">
-      <img src={logo} alt="l" />
-    </li>
-    <li>
-      <RowColSelector
-        rowsNum={rowsNum}
-        setRowsNum={setRowsNum}
-        colsNum={colsNum}
-        setColsNum={setColsNum}
-        rerender={rerender}
-        setRerender={setRerender}
-      />
-    </li>
-    <li className="header_list__item">
-      <button
-        className="reset"
-        onClick={() => {
-          setRerender((rerender) => !rerender);
-        }}
-      >
-        reset
-      </button>
-    </li>
-  </ul>
+  <div className="header">
+    <ul className="header_list">
+      <li>
+        <Logo />
+      </li>
+      <li>
+        <RowColSelector
+          rowsNum={rowsNum}
+          setRowsNum={setRowsNum}
+          colsNum={colsNum}
+          setColsNum={setColsNum}
+          rerender={rerender}
+          setRerender={setRerender}
+        />
+      </li>
+      <li className="header_list__item">
+        <button
+          className="reset"
+          onClick={() => {
+            setRerender((rerender) => !rerender);
+          }}
+        >
+          reset
+        </button>
+      </li>
+    </ul>
+  </div>
 );
 
 export default Header;

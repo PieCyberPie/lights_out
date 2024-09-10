@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Adamina&display=swap");
 @import "./utils/reset.scss";
 @import "./utils/fonts.scss";
 @import "./utils/variables.scss";
@@ -6,3 +7,5 @@
 @import "../components/Field/field.scss";
 @import "../components/RowColSelector/rowcolselector.scss";
 @import "../components/Cell/cell.scss";
+@import "../components/Logo/logo.scss";
+@import "../components/Selector/selector.scss";
