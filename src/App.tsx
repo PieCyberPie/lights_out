@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./components/Header/Header.tsx";
 import "./styles/index.scss";
 import Field from "./components/Field/Field.tsx";
+import Footer from "./components/Footer/Footer.tsx";
 
 function App() {
   const [rowsNum, setRowsNum] = useState(3);
@@ -19,6 +20,7 @@ function App() {
         setRerender={setRerender}
       />
       <Field rowsNum={rowsNum} colsNum={colsNum} />
+      <Footer />
     </main>
   );
 }

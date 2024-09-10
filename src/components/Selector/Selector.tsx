@@ -10,7 +10,9 @@ const Selector: React.FC<SelectorProps> = ({ num, stateChange }) => {
         alt=""
         className="button"
         onClick={() => {
-          stateChange((num) => num + 1);
+          if (num <= 6) {
+            stateChange((num) => num + 1);
+          }
         }}
       />
       <p className="numberOfRowCol">{num}</p>
@@ -19,7 +21,9 @@ const Selector: React.FC<SelectorProps> = ({ num, stateChange }) => {
         alt=""
         className="button"
         onClick={() => {
-          stateChange((num) => num - 1);
+          if (num > 3) {
+            stateChange((num) => num - 1);
+          }
         }}
       />
     </div>
