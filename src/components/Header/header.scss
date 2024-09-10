@@ -8,14 +8,21 @@
   box-sizing: border-box;
   height: 6em;
   width: 100%;
+  height: fit-content;
   display: flex;
+  flex-wrap: wrap;
   padding-inline: 5em;
   justify-content: space-between;
   align-items: center;
   background-color: $accent;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
   border: 2px solid $accent-dark;
+
+  @include on-phone {
+    justify-content: center;
+    padding-block: 1rem;
+  }
 
   &__item {
     text-transform: uppercase;
