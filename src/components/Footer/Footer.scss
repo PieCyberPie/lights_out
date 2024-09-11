@@ -1,3 +1,30 @@
-.text {
-  background-color: $accent;
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+  // filter: drop-shadow(1px 1px 10px black);
+}
+
+.footer {
+  margin-bottom: 1rem;
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+
+  @include on-phone {
+    width: 80%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    filter: drop-shadow(0 0 8px black);
+  }
 }
