@@ -3,5 +3,6 @@ export interface CellProps {
   col: number;
   setMovesNum: React.Dispatch<React.SetStateAction<number>>;
   rowsNum: number;
+  rerender: boolean;
   color?: string;
 }

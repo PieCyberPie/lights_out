@@ -1,5 +1,6 @@
 import { HeaderProps } from "../../types/HeaderProps";
 import Logo from "../Logo/Logo";
+import Reset from "../Reset/Reset";
 import RowColSelector from "../RowColSelector/RowColSelector";
 
 const Header: React.FC<HeaderProps> = ({
@@ -32,15 +33,7 @@ const Header: React.FC<HeaderProps> = ({
         <p className="moves">Number of moves: {movesNum}</p>
       </li>
       <li className="header_list__item">
-        <button
-          className="reset"
-          onClick={() => {
-            setRerender((rerender) => !rerender);
-            setMovesNum(0);
-          }}
-        >
-          reset
-        </button>
+        <Reset setRerender={setRerender} setMovesNum={setMovesNum} />
       </li>
     </ul>
   </div>

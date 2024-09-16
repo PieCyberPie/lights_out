@@ -1,0 +1,46 @@
+.win_container {
+  padding: 2em;
+  border-radius: 20px;
+  border: 2px solid $accent-dark;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: max-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $accent;
+  position: absolute;
+  opacity: 1;
+  z-index: 300;
+
+  @include on-phone {
+    padding: 0.8em;
+  }
+
+  &_item {
+    margin-bottom: 10px;
+  }
+
+  &_title {
+    font-size: 2em;
+    @include on-phone {
+      font-size: 28px;
+    }
+  }
+
+  &_text {
+    font-size: inherit;
+    @include on-phone {
+      font-size: 14px;
+    }
+  }
+}
+
+.opacity_layer {
+  position: absolute;
+  width: 100dvw;
+  height: 100dvh;
+  opacity: 0;
+  background: #000;
+}

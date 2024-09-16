@@ -1,7 +1,12 @@
 import { FieldProps } from "../../types/FieldProps";
 import Cell from "../Cell/Cell";
 
-const Field: React.FC<FieldProps> = ({ rowsNum, colsNum, setMovesNum }) => {
+const Field: React.FC<FieldProps> = ({
+  rowsNum,
+  colsNum,
+  setMovesNum,
+  rerender,
+}) => {
   const cells = Array.from({ length: rowsNum * colsNum }, (_, index) => index);
 
   return (
@@ -20,6 +25,7 @@ const Field: React.FC<FieldProps> = ({ rowsNum, colsNum, setMovesNum }) => {
               col={cellId % colsNum}
               setMovesNum={setMovesNum}
               rowsNum={rowsNum}
+              rerender={rerender}
               key={cellId}
             />
           );

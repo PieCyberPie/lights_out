@@ -3,6 +3,7 @@ import Header from "./components/Header/Header.tsx";
 import "./styles/index.scss";
 import Field from "./components/Field/Field.tsx";
 import Footer from "./components/Footer/Footer.tsx";
+import WinMessage from "./components/WinMessage/WinMessage.tsx";
 
 export const DEFAULT_MODE = "default";
 export const CUSTOM_MODE = "custom";
@@ -12,8 +13,10 @@ function App() {
   const [colsNum, setColsNum] = useState(3);
   const [movesNum, setMovesNum] = useState(0);
   const [rerender, setRerender] = useState(false);
-  // const [isWin, setIsWin] = useState(false);
-  // const [mode, setMode] = useState(DEFAULT_MODE);
+  const [isWin, setIsWin] = useState(true);
+  const [mode, setMode] = useState(DEFAULT_MODE);
+
+  console.log(mode, setMode);
 
   return (
     <main>
@@ -32,7 +35,16 @@ function App() {
         colsNum={colsNum}
         movesNum={movesNum}
         setMovesNum={setMovesNum}
+        rerender={rerender}
       />
+      {isWin ? (
+        <WinMessage
+          setRerender={setRerender}
+          setMovesNum={setMovesNum}
+          setIsWin={setIsWin}
+          movesNum={movesNum}
+        />
+      ) : null}
       <Footer />
     </main>
   );
