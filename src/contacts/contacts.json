@@ -1,11 +1,9 @@
 [
   {
-    "icon": "../../assets/contacts/telegram.svg",
     "name": "Telegram",
     "link": "https://t.me/piecyberpie"
   },
   {
-    "icon": "../../assets/contacts/github.svg",
     "name": "GitHub",
     "link": "https://github.com/PieCyberPie"
   }

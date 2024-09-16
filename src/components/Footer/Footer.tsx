@@ -18,7 +18,7 @@ const Footer = () => {
       {contacts.map((contact) => {
         const IconComponent = iconMap[contact.name];
         return (
-          <a href={contact.link} className="contact-container">
+          <a href={contact.link} target="_blank" className="contact-container">
             <img src={IconComponent} alt={contact.name} className="icon" />
             <p>{contact.name}</p>
           </a>
@@ -29,7 +29,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-{
-  /* <img src={IconComponent} alt={contact.name} className="icon" />; */
-}
