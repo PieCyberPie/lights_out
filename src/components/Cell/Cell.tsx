@@ -1,19 +1,23 @@
 import classNames from "classnames";
 import { CellProps } from "../../types/CellProps";
 import { makeMove } from "./helperFunctions";
+import { memo } from "react";
 
-export const Cell: React.FC<CellProps> = ({ row, col, color }) => {
-  return (
-    <div
-      className={classNames("cell", color || colorChooser())}
-      data-row={row}
-      data-col={col}
-      onClick={(e) => {
-        makeMove(e.currentTarget);
-      }}
-    ></div>
-  );
-};
+export const Cell: React.FC<CellProps> = memo(
+  ({ row, col, setMovesNum, color }) => {
+    return (
+      <div
+        className={classNames("cell", color || colorChooser())}
+        data-row={row}
+        data-col={col}
+        onClick={(e) => {
+          makeMove(e.currentTarget);
+          setMovesNum((movesNum) => movesNum + 1);
+        }}
+      ></div>
+    );
+  }
+);
 
 export default Cell;
 

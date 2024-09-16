@@ -6,13 +6,22 @@ const RowColSelector: React.FC<RowsColsProps> = ({
   setRowsNum,
   colsNum,
   setColsNum,
+  setMovesNum,
 }) => {
   return (
     <div className="rowcolselector-container">
       <p>Number of rows:</p>
-      <Selector num={rowsNum} stateChange={setRowsNum} />
+      <Selector
+        num={rowsNum}
+        stateChange={setRowsNum}
+        setMovesNum={setMovesNum}
+      />
       <p>Number of columns:</p>
-      <Selector num={colsNum} stateChange={setColsNum} />
+      <Selector
+        num={colsNum}
+        stateChange={setColsNum}
+        setMovesNum={setMovesNum}
+      />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 .header {
   width: 100%;
   position: relative;
+  height: max-content;
 }
 
 .header_list {
@@ -28,6 +29,9 @@
     text-transform: uppercase;
     line-height: 0;
 
+    @include on-phone {
+      margin-top: 10px;
+    }
     img {
       border-radius: 5px;
     }

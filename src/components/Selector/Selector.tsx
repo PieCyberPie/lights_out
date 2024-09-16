@@ -2,7 +2,11 @@ import { SelectorProps } from "../../types/SelectorProps";
 import arrowUp from "../../assets/buttons/aUp.svg";
 import arrowDown from "../../assets/buttons/aDown.svg";
 
-const Selector: React.FC<SelectorProps> = ({ num, stateChange }) => {
+const Selector: React.FC<SelectorProps> = ({
+  num,
+  stateChange,
+  setMovesNum,
+}) => {
   return (
     <div className="selector-container">
       <img
@@ -11,6 +15,7 @@ const Selector: React.FC<SelectorProps> = ({ num, stateChange }) => {
         className="button"
         onClick={() => {
           if (num <= 6) {
+            setMovesNum(0);
             stateChange((num) => num + 1);
           }
         }}
@@ -22,6 +27,7 @@ const Selector: React.FC<SelectorProps> = ({ num, stateChange }) => {
         className="button"
         onClick={() => {
           if (num > 3) {
+            setMovesNum(0);
             stateChange((num) => num - 1);
           }
         }}

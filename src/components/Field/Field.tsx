@@ -1,7 +1,7 @@
-import { FieldRowsColsProps } from "../../types/FieldRowsColsProps";
+import { FieldProps } from "../../types/FieldProps";
 import Cell from "../Cell/Cell";
 
-const Field: React.FC<FieldRowsColsProps> = ({ rowsNum, colsNum }) => {
+const Field: React.FC<FieldProps> = ({ rowsNum, colsNum, setMovesNum }) => {
   const cells = Array.from({ length: rowsNum * colsNum }, (_, index) => index);
 
   return (
@@ -14,11 +14,11 @@ const Field: React.FC<FieldRowsColsProps> = ({ rowsNum, colsNum }) => {
         }}
       >
         {cells.map((cellId) => {
-          cellId;
           return (
             <Cell
               row={Math.floor(cellId / colsNum)}
               col={cellId % colsNum}
+              setMovesNum={setMovesNum}
               key={cellId}
             />
           );

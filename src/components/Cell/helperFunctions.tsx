@@ -29,4 +29,5 @@ function toggleAdjacentCells(cell: HTMLElement): void {
 export const makeMove = (targetCell: HTMLElement) => {
   toggleCell(targetCell);
   toggleAdjacentCells(targetCell);
+  
 };
