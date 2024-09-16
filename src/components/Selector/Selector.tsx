@@ -6,6 +6,7 @@ const Selector: React.FC<SelectorProps> = ({
   num,
   stateChange,
   setMovesNum,
+  setRerender,
 }) => {
   return (
     <div className="selector-container">
@@ -15,6 +16,7 @@ const Selector: React.FC<SelectorProps> = ({
         className="button"
         onClick={() => {
           if (num <= 6) {
+            setRerender((rerender) => !rerender);
             setMovesNum(0);
             stateChange((num) => num + 1);
           }
@@ -27,6 +29,7 @@ const Selector: React.FC<SelectorProps> = ({
         className="button"
         onClick={() => {
           if (num > 3) {
+            setRerender((rerender) => !rerender);
             setMovesNum(0);
             stateChange((num) => num - 1);
           }

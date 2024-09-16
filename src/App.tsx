@@ -12,8 +12,8 @@ function App() {
   const [colsNum, setColsNum] = useState(3);
   const [movesNum, setMovesNum] = useState(0);
   const [rerender, setRerender] = useState(false);
-  const [isWin, setIsWin] = useState(false);
-  const [mode, setMode] = useState(DEFAULT_MODE);
+  // const [isWin, setIsWin] = useState(false);
+  // const [mode, setMode] = useState(DEFAULT_MODE);
 
   return (
     <main>

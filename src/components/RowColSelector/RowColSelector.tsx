@@ -6,6 +6,7 @@ const RowColSelector: React.FC<RowsColsProps> = ({
   setRowsNum,
   colsNum,
   setColsNum,
+  setRerender,
   setMovesNum,
 }) => {
   return (
@@ -15,12 +16,14 @@ const RowColSelector: React.FC<RowsColsProps> = ({
         num={rowsNum}
         stateChange={setRowsNum}
         setMovesNum={setMovesNum}
+        setRerender={setRerender}
       />
       <p>Number of columns:</p>
       <Selector
         num={colsNum}
         stateChange={setColsNum}
         setMovesNum={setMovesNum}
+        setRerender={setRerender}
       />
     </div>
   );

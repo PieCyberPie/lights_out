@@ -19,6 +19,7 @@ const Field: React.FC<FieldProps> = ({ rowsNum, colsNum, setMovesNum }) => {
               row={Math.floor(cellId / colsNum)}
               col={cellId % colsNum}
               setMovesNum={setMovesNum}
+              rowsNum={rowsNum}
               key={cellId}
             />
           );
