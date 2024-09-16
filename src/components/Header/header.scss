@@ -52,3 +52,10 @@
     background-color: #d34343;
   }
 }
+
+.moves {
+  @include on-phone {
+    width: 300px;
+    text-align: center;
+  }
+}

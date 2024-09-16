@@ -29,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({
         />
       </li>
       <li>
-        <p>Number of moves: {movesNum}</p>
+        <p className="moves">Number of moves: {movesNum}</p>
       </li>
       <li className="header_list__item">
         <button
