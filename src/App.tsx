@@ -4,6 +4,7 @@ import "./styles/index.scss";
 import Field from "./components/Field/Field.tsx";
 import Footer from "./components/Footer/Footer.tsx";
 import WinMessage from "./components/WinMessage/WinMessage.tsx";
+import Sidebar from "./components/Sidebar/Sidebar.tsx";
 
 export const DEFAULT_MODE = "default";
 export const CUSTOM_MODE = "custom";
@@ -37,6 +38,7 @@ function App() {
         setMovesNum={setMovesNum}
         rerender={rerender}
       />
+      <Sidebar />
       {isWin ? (
         <WinMessage
           setRerender={setRerender}
